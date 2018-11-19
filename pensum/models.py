@@ -14,7 +14,6 @@ class Grado(models.Model):
     def __str__(self):
         return self.nombre
 
-
 class Seccion(models.Model):
     grado = models.ForeignKey(Grado, on_delete=models.CASCADE)
     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
