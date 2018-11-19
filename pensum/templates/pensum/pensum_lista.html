@@ -1,0 +1,16 @@
+<h1>Listado de Grados</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for grado in grados %}
+        <tr>
+          <th scope="row">{{ cliente.nit }}</th>
+          <td>{{ grado.nombre }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>

@@ -16,5 +16,10 @@ def pensum_nuevo(request):
             messages.add_message(request, messages.SUCCESS, 'Exito.')
             return redirect('pensum_lista')
     else:
-        formulario = ClienteForm()
+        formulario = GradoForm()
     return render(request, 'pensum/pensum_nuevo.html', {'formulario': formulario})
+
+def pensum_lista(request):
+    #clientes = Factura.objects.filter(cliente__nit=12345678)
+    grados = Grado.objects.all()
+    return render(request, 'pensum/pensum_lista.html', {'grados': grados})
